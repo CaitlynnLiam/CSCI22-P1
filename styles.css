@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin:0;
+}
+/* universal fonts */
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* containers */
+
+#main_container{
+  display: grid;
+  grid-template-columns: 1fr 0.75fr 5% 2.75fr 5%;
+  grid-template-rows: 1fr 1.5fr 3fr max-content;
+}
+
+#post_container{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding:0px 250px 40px 40px;
+}
+
+/* side styling */
+
+#s_img{
+  grid-column: 1/2;
+  grid-row: 1/5;
+  background-image: url(side1.png);
+  background-attachment: fixed;
+}
+
+#s_content_container{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: end;
+}
+
+.s_content{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 2px 2px 20px black;
+}
+
+.in_side_content h2{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* nav styling */
+
+#nav{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-items: start;
+}
+
+#nav > nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+#nav_header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav_header h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+#nav_header > img{
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+
+nav > ul{
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+ul li a{
+  text-decoration:  none;
+  color: black;
+  padding: 0 40px 0 40px;
+  margin-left: -30px;
+  transition: margin-left 0.5s;
+}
+
+ul li a:hover{
+  color: gray;
+  margin-left: -20px;
+}
+
+#nav_footer{
+  grid-column: 2/3;
+  grid-row: 4/5;
+  align-self: end;
+}
+
+footer{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+}
+
+/* post styling */
+
+#body{
+  grid-column: 4/5;
+  grid-row: 1/5;
+  align-content: end;
+}
+
+#body h1{
+  margin-top: 100px;
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  margin: 60px;
+}
+
+.post img{
+  max-height: 600px;
+  width: auto;
+  object-fit: contain;
+  margin: 40px;
+}
+
+.post h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.post > p{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
