@@ -28,14 +28,14 @@ p{
   align-content: space-between;
   padding:0px 250px 40px 40px;
 }
-
 /* side styling */
 
-#s_img{
+#s_img1{
   grid-column: 1/2;
   grid-row: 1/5;
   justify-content: center;
   background-image: url(side1.png);
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -58,18 +58,46 @@ p{
   text-shadow: 2px 2px 20px black;
 }
 
-/* nav styling */
-
-#nav{
-  grid-column: 2/3;
-  grid-row: 2/3;
-  align-items: start;
-}
-
-#nav > nav {
+.s_content2{
   display: flex;
   flex-direction: column;
-  position: fixed;
+  flex-flow: row wrap;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 2px 2px 20px black;
+}
+
+#s_content_container_settings{
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: center;
+  margin-top: 106px;
+}
+
+/* nav styling */
+
+.nav{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;
+}
+
+.nav2{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;
+  margin-bottom: 78px;
+}
+
+.nav_settings{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-top: 31px;
 }
 
 #nav_header{
@@ -137,6 +165,22 @@ footer{
   margin-top: 100px;
 }
 
+.layout2 #body{
+  margin-top: 0px;
+}
+
+#communities_flex{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  margin-right: 210px;
+}
+
+#communities_flex > img{
+  max-height: 350px;
+  max-width: auto;
+}
+
 .post{
   display: flex;
   flex-direction: column;
@@ -145,8 +189,8 @@ footer{
 }
 
 .post img{
+  max-width: 600px;
   max-height: 600px;
-  width: auto;
   object-fit: contain;
   margin: 40px;
 }
@@ -161,6 +205,40 @@ footer{
   color: black;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+.post_footer{
+  color: gray;
+  font-size: 12px;
+  margin: 10px;
+}
+
+/* settings styling */
+
+#settings{
+  margin: 60px;
+}
+
+#settings > ul{
+  list-style: none;
+}
+
+#settings ul li{
+  margin: 30px;
+  display: inline;
+}
+
+#settings ul li h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 /* media queries */
