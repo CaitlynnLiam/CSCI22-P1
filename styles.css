@@ -16,6 +16,12 @@ p{
 
 a{
   text-decoration: none;
+  color: darkgray;
+  transition: color 0.5s;
+}
+
+a:hover{
+  color: gray;
 }
 
 /* containers */
@@ -42,7 +48,7 @@ a{
   grid-row: 1/5;
   display: grid;
   grid-template-columns: 0.8fr 0.25fr;
-  grid-template-rows: 0.0365fr 1fr 0.05fr auto;
+  grid-template-rows: 0.058fr 1fr 0.05fr auto;
 }
 
 /* post flexbox */
@@ -73,6 +79,17 @@ a{
   grid-template-rows: 0.05fr 0.1fr 1fr auto;
 }
 
+/* discover layout container */
+
+#discover_container{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  margin: 40px;
+  justify-content: space-around;
+  align-content: center;
+}
+
 /* post layout containers */
 
 #posts_layout_container{
@@ -88,10 +105,16 @@ a{
 
 /* community recommendations */
 
-#communities_body_grid h1{
+#communities_body_grid .communities{
   grid-column: 2/3;
   grid-row: 1/2;
   align-self: end;
+  justify-self: center;
+}
+
+#communities_body_grid .discover{
+  grid-column: 2/3;
+  grid-row: 3/4;
   justify-self: center;
 }
 
@@ -198,7 +221,7 @@ footer{
 
 /* community display styling */
 
-.community_display_item{
+.community_display_item1{
   width: 260px;
   height: 260px;
   min-width: 150px;
@@ -206,16 +229,42 @@ footer{
   display: flex;
   align-items: center;
   justify-items: center;
-  background: url(avatar.png);
+  background: url(pictures/radish_button.jpg);
   border-radius:20px;
   transition: border-radius 0.4s ease-out;
 }
 
-.community_display_item:hover{
+.community_display_item2{
+  width: 260px;
+  height: 260px;
+  min-width: 150px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background: url(pictures/envi_button.jpg);
+  border-radius:20px;
+  transition: border-radius 0.4s ease-out;
+}
+
+.community_display_item3{
+  width: 260px;
+  height: 260px;
+  min-width: 150px;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background: url(pictures/diy_button.jpg);
+  border-radius:20px;
+  transition: border-radius 0.4s ease-out;
+}
+
+.community_display_item1:hover, .community_display_item2:hover, .community_display_item3:hover{
   border-radius: 80px;
 }
 
-.community_display_item h3{
+.community_display_item1 h3, .community_display_item2 h3, .community_display_item3 h3{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: capitalize;
