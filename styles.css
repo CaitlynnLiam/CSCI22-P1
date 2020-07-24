@@ -34,7 +34,7 @@ p{
   grid-column: 1/2;
   grid-row: 1/5;
   justify-content: center;
-  background-image: url(side1.png);
+  /*background-image: url(side1.png);*/
   background-position: center;
   background-attachment: fixed;
 }
@@ -176,7 +176,7 @@ footer{
   margin-right: 210px;
 }
 
-#communities_flex > img{
+#communities_flex img{
   max-height: 350px;
   max-width: auto;
 }
@@ -305,5 +305,18 @@ input{
     flex-flow: row wrap;
     margin: 40px;
   }
+
+}
+
+/*Outboung Links*/
+.outbound{
+
+}
+
+.outbound:hover{
+
+}
+
+.outbound:active{
 
 }
